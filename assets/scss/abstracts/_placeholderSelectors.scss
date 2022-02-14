@@ -1,0 +1,6 @@
+@use './variables' as vars;
+
+%darkgreen-white {
+  background-color: vars.$primary-color;
+  color: vars.$inner-text-color;
+}
