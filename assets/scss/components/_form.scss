@@ -1,0 +1,54 @@
+@use '../abstracts/variables' as vars;
+.form {
+  $opacity: 0.2;
+
+  width: fit-content;
+  margin-inline: auto;
+  padding: vars.$medium-gap;
+
+  background-color: rgba($color: vars.$inner-text-color, $alpha: $opacity);
+  border-radius: 4px;
+  box-shadow: rgba($color: vars.$text-color, $alpha: $opacity) 0px 3px 10px 0px;
+
+  &__heading {
+    margin-bottom: vars.$regular-gap;
+    font-weight: 400;
+  }
+
+  &__field {
+    position: relative;
+    margin-bottom: vars.$small-gap;
+    height: 40px;
+    width: 350px;
+  }
+
+  &__label {
+    position: absolute;
+    top: 50%;
+    left: calc((vars.$regular-gap / 2) + 2px); //map padding-inline of input
+    transform: translateY(-50%);
+    z-index: 1;
+
+    color: vars.$text-color;
+    cursor: text;
+  }
+
+  &__input,
+  &__submit {
+    position: absolute;
+    inset: 0;
+    padding: calc(vars.$regular-gap / 2);
+
+    border-radius: 2px;
+    font-size: vars.$small-font-size;
+    letter-spacing: vars.$large-spacing;
+  }
+
+  &__input {
+    color: vars.$text-color;
+    &:focus {
+      border: 2px solid vars.$second-color;
+      transition: 0s;
+    }
+  }
+}
