@@ -1,0 +1,7 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/placeholderSelectors';
+
+.content {
+  padding-block: vars.$big-gap;
+  @extend %darkgreen-white;
+}

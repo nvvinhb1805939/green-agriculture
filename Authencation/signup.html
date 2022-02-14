@@ -5,9 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Đăng ký ngay | Nông Nghiệp Xanh</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+      integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" href="../assets/images/logo.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../assets/css/main.css" />
   </head>
   <body>
-    this is signup
+    <header class="header header--second">
+      <div class="container">
+        <div class="header__top grid grid--2">
+          <p class="header__time">
+            <span class="header__day">Thứ hai</span>
+            <span class="header__date">14/02/2022</span>
+            <span> | </span>
+            <span class="header__hour">12:11</span>
+            <span>GMT +7</span>
+          </p>
+        </div>
+        <div class="header__logo">
+          <a href="#">
+            <img src="../assets/images/logo.png" alt="logo" class="header__img" />
+            <span>Nông Nghiệp Xanh</span>
+          </a>
+        </div>
+        <h1 class="header__heading">Đăng ký</h1>
+      </div>
+    </header>
+    <main class="main">
+      <section class="content">
+        <div class="container">
+          <form class="form">
+            <h4 class="form__heading">Đăng ký</h4>
+            <div class="form__field">
+              <label class="form__label" for="name">Họ tên</label>
+              <input id="name" class="form__input" type="text" name="name" />
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="phone">Số điện thoại</label>
+              <input id="phone" class="form__input" type="text" name="phone" />
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="email">Email</label>
+              <input id="email" class="form__input" type="text" name="email" />
+            </div>
+            <div class="form__field">
+              <input class="form__btn btn" type="submit" />
+            </div>
+            <p class="form__split">Hoặc</p>
+            <div class="form__socials">
+              <a href="#" class="form__btn btn">
+                <i class="fab fa-facebook"></i>
+                <span>Facebook</span>
+              </a>
+              <a href="#" class="form__btn btn">
+                <i class="fab fa-google"></i>
+                <span>Google</span>
+              </a>
+            </div>
+            <p class="form__mesage">
+              <span>Bạn đã có tài khoản?</span>
+              <a href="./login.html" class="form__link">Đăng nhập</a>
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"></footer>
   </body>
 </html>

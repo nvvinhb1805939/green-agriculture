@@ -4,3 +4,9 @@
   background-color: vars.$primary-color;
   color: vars.$inner-text-color;
 }
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

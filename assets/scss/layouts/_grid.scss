@@ -1,0 +1,22 @@
+@use '../abstracts/variables' as vars;
+
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-auto-rows: 1fr;
+
+  &--2 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: vars.$medium-gap;
+  }
+
+  &--5 {
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: vars.$small-gap;
+  }
+}

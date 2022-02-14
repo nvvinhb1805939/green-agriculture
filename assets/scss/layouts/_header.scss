@@ -1,1 +1,58 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mixs;
+@use '../abstracts/placeholderSelectors';
 
+.header {
+  @extend %darkgreen-white;
+
+  &--second {
+    background-color: vars.$inner-text-color;
+    color: vars.$text-color;
+  }
+
+  &__top {
+    padding-block: 8px;
+  }
+  &__time {
+    font-size: 1.4rem;
+  }
+
+  &__control {
+    text-align: right;
+  }
+  &__btn {
+    border: none;
+    background-color: inherit;
+
+    &:hover {
+      color: vars.$second-color;
+    }
+  }
+
+  &__logo > a {
+    @extend %flex-center;
+
+    & > img {
+      width: 50px;
+      height: 50px;
+      margin-right: 8px;
+    }
+
+    & > span {
+      font-size: vars.$large-font-size;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: vars.$inner-text-color;
+    }
+  }
+
+  &--second &__logo > a > span {
+    color: vars.$primary-color;
+  }
+
+  &__heading {
+    font-size: vars.$large-font-size;
+    font-weight: 500;
+    text-align: center;
+  }
+}

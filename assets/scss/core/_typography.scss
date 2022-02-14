@@ -1,1 +1,20 @@
+@use '../abstracts/variables' as vars;
 
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: vars.$primary-font;
+  font-size: vars.$small-font-size;
+  line-height: 1.6;
+  letter-spacing: vars.$regular-spacing;
+  color: vars.$text-color;
+}
+h1 {
+  font-size: vars.$largest-font-size;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+h4 {
+  font-size: vars.$large-font-size;
+}
