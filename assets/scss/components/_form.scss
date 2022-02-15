@@ -1,18 +1,25 @@
 @use '../abstracts/variables' as vars;
+@use '../abstracts/placeholderSelectors';
+
 .form {
-  $opacity: 0.2;
+  $bg-color: vars.$inner-text-color;
+  $border-color: vars.$primary-color;
+  $left: calc((vars.$regular-gap / 2));
+  $light-gray: #ccc;
 
   width: fit-content;
   margin-inline: auto;
   padding: vars.$medium-gap;
 
-  background-color: rgba($color: vars.$inner-text-color, $alpha: $opacity);
+  color: vars.$text-color;
+  background-color: $bg-color;
   border-radius: 4px;
-  box-shadow: rgba($color: vars.$text-color, $alpha: $opacity) 0px 3px 10px 0px;
+  box-shadow: rgba($color: vars.$text-color, $alpha: 0.2) 0px 3px 10px 0px;
 
   &__heading {
     margin-bottom: vars.$regular-gap;
     font-weight: 400;
+    color: vars.$primary-color;
   }
 
   &__field {
@@ -25,30 +32,137 @@
   &__label {
     position: absolute;
     top: 50%;
-    left: calc((vars.$regular-gap / 2) + 2px); //map padding-inline of input
+    left: $left;
     transform: translateY(-50%);
     z-index: 1;
 
     color: vars.$text-color;
-    cursor: text;
+    pointer-events: none;
   }
 
   &__input,
   &__submit {
     position: absolute;
     inset: 0;
-    padding: calc(vars.$regular-gap / 2);
+    padding: $left;
 
-    border-radius: 2px;
+    border-radius: 4px;
     font-size: vars.$small-font-size;
     letter-spacing: vars.$large-spacing;
   }
 
   &__input {
-    color: vars.$text-color;
-    &:focus {
-      border: 2px solid vars.$second-color;
-      transition: 0s;
+    border: 1px solid vars.$boder-color;
+  }
+
+  &__input:focus {
+    border: 1px solid $border-color;
+  }
+
+  &__input:not(:placeholder-shown) + &__label,
+  &__input:focus + &__label {
+    $inline: 4px;
+    top: 0;
+    left: calc($left - $inline);
+    padding: $inline;
+
+    background-color: $bg-color;
+    color: $border-color;
+  }
+
+  &__submit {
+    text-transform: uppercase;
+
+    &:hover {
+      color: vars.$inner-text-color;
+      opacity: 0.8;
+    }
+  }
+
+  &__split {
+    position: relative;
+    padding-block: vars.$regular-gap;
+    color: $light-gray;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 50% 0 0 0;
+      transform: translateY(-50%);
+      z-index: 1;
+
+      height: 1px;
+      background-color: currentColor;
+    }
+
+    & > span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+
+      padding-inline: vars.$small-gap;
+      text-transform: uppercase;
+      font-weight: 500;
+      background-color: vars.$inner-text-color;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    column-gap: vars.$regular-gap;
+    margin-block: vars.$small-gap vars.$regular-gap;
+  }
+
+  &__btn {
+    flex: 1;
+    @extend %flex-center;
+    column-gap: 8px;
+    padding-inline: vars.$small-gap;
+    border: 1px solid vars.$boder-color;
+
+    &:hover {
+      border-color: vars.$boder-color;
+      background-color: #eee;
+      color: vars.$text-color;
+    }
+  }
+
+  &__icon {
+    font-size: 22px;
+
+    &--fb {
+      color: #1877f2;
+    }
+  }
+
+  &__mesage {
+    text-align: center;
+
+    & > span {
+      color: $light-gray;
+    }
+  }
+
+  &__link {
+    position: relative;
+    color: vars.$primary-color;
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+
+      background-color: vars.$primary-color;
+    }
+
+    &:hover::after {
+      width: 100%;
     }
   }
 }

@@ -3,10 +3,8 @@
 @use '../abstracts/mixins' as mixs;
 
 .btn {
-  border: 1px solid vars.$boder-color;
   border-radius: 2px;
-  background-color: white;
-  color: inherit;
+  border: 0;
 
   font-size: inherit;
   letter-spacing: inherit;

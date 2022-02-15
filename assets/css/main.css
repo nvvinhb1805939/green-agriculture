@@ -5,7 +5,7 @@
   color: white;
 }
 
-.header__logo > a {
+.form__btn, .header__logo > a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,6 +25,7 @@ html {
 }
 
 a {
+  display: inline-block;
   text-decoration: none;
   color: inherit;
 }
@@ -44,10 +45,8 @@ input {
 }
 
 .btn {
-  border: 1px solid #00000042;
   border-radius: 2px;
-  background-color: white;
-  color: inherit;
+  border: 0;
   font-size: inherit;
   letter-spacing: inherit;
   cursor: pointer;
@@ -161,13 +160,15 @@ h4 {
   width: fit-content;
   margin-inline: auto;
   padding: 30px;
-  background-color: rgba(255, 255, 255, 0.2);
+  color: #212529;
+  background-color: white;
   border-radius: 4px;
   box-shadow: rgba(33, 37, 41, 0.2) 0px 3px 10px 0px;
 }
 .form__heading {
   margin-bottom: 24px;
   font-weight: 400;
+  color: darkgreen;
 }
 .form__field {
   position: relative;
@@ -178,26 +179,108 @@ h4 {
 .form__label {
   position: absolute;
   top: 50%;
-  left: 14px;
+  left: 12px;
   transform: translateY(-50%);
   z-index: 1;
   color: #212529;
-  cursor: text;
+  pointer-events: none;
 }
 .form__input, .form__submit {
   position: absolute;
   inset: 0;
   padding: 12px;
-  border-radius: 2px;
+  border-radius: 4px;
   font-size: 1.4rem;
   letter-spacing: 0.1em;
 }
 .form__input {
-  color: #212529;
+  border: 1px solid rgba(0, 0, 0, 0.25);
 }
 .form__input:focus {
-  border: 2px solid #e9da5d;
-  transition: 0s;
+  border: 1px solid darkgreen;
+}
+.form__input:not(:placeholder-shown) + .form__label, .form__input:focus + .form__label {
+  top: 0;
+  left: 8px;
+  padding: 4px;
+  background-color: white;
+  color: darkgreen;
+}
+.form__submit {
+  text-transform: uppercase;
+}
+.form__submit:hover {
+  color: white;
+  opacity: 0.8;
+}
+.form__split {
+  position: relative;
+  padding-block: 24px;
+  color: #ccc;
+}
+.form__split::after {
+  content: "";
+  position: absolute;
+  inset: 50% 0 0 0;
+  transform: translateY(-50%);
+  z-index: 1;
+  height: 1px;
+  background-color: currentColor;
+}
+.form__split > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  padding-inline: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+  background-color: white;
+}
+.form__socials {
+  display: flex;
+  column-gap: 24px;
+  margin-block: 15px 24px;
+}
+.form__btn {
+  flex: 1;
+  column-gap: 8px;
+  padding-inline: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.form__btn:hover {
+  border-color: rgba(0, 0, 0, 0.25);
+  background-color: #eee;
+  color: #212529;
+}
+.form__icon {
+  font-size: 22px;
+}
+.form__icon--fb {
+  color: #1877f2;
+}
+.form__mesage {
+  text-align: center;
+}
+.form__mesage > span {
+  color: #ccc;
+}
+.form__link {
+  position: relative;
+  color: darkgreen;
+}
+.form__link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: darkgreen;
+}
+.form__link:hover::after {
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
