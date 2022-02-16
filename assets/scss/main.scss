@@ -1,7 +1,13 @@
-@use './core/reset';
+/*==============Components==============*/
 @use './components/button';
+@use './components/form';
+@use './components/logo';
+/*==============Core==============*/
+@use './core/reset';
 @use './core/typography';
+/*==============Layouts==============*/
 @use './layouts/grid';
 @use './layouts/header';
+/*==============Sections==============*/
 @use './sections/content';
-@use './components/form';
+/*==============Pages==============*/

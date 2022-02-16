@@ -1,0 +1,24 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/placeholderSelectors';
+.logo {
+  margin-bottom: vars.$medium-gap;
+
+  & > a {
+    @extend %flex-center;
+    width: fit-content;
+    margin-inline: auto;
+
+    & > img {
+      width: 50px;
+      height: 50px;
+      margin-right: 8px;
+    }
+
+    & > span {
+      font-size: vars.$large-font-size;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: vars.$inner-text-color;
+    }
+  }
+}

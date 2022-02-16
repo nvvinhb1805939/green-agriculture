@@ -26,7 +26,7 @@
     position: relative;
     margin-bottom: vars.$small-gap;
     height: 40px;
-    width: 350px;
+    width: 450px;
   }
 
   &__label {
@@ -57,6 +57,7 @@
 
   &__input:focus {
     border: 1px solid $border-color;
+    box-shadow: 0 0 4px #75e718;
   }
 
   &__input:not(:placeholder-shown) + &__label,
@@ -64,7 +65,7 @@
     $inline: 4px;
     top: 0;
     left: calc($left - $inline);
-    padding: $inline;
+    padding: 0 $inline;
 
     background-color: $bg-color;
     color: $border-color;
