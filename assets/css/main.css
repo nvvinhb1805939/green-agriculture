@@ -5,7 +5,7 @@
   color: white;
 }
 
-.logo > a, .form__btn {
+.logo > a, .form__field--remember, .form__btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,6 +55,10 @@
   margin-bottom: 15px;
   height: 40px;
   width: 450px;
+}
+.form__field--remember {
+  margin-bottom: 15px;
+  justify-content: flex-start;
 }
 .form__label {
   position: absolute;
@@ -158,10 +162,24 @@
   left: 0;
   width: 0;
   height: 1px;
-  background-color: darkgreen;
+  background-color: currentColor;
 }
 .form__link:hover::after {
   width: 100%;
+}
+.form__link--second {
+  color: #ff0000;
+}
+.form__link--second::after {
+  background-color: currentColor;
+}
+.form__field--remember .form__input, .form__field--remember .form__label {
+  position: unset;
+  transform: none;
+}
+.form__field--remember .form__label {
+  margin-left: 4px;
+  pointer-events: unset;
 }
 
 .logo {
@@ -275,7 +293,7 @@ h4 {
   background-color: inherit;
 }
 .header__btn:hover {
-  color: #e9da5d;
+  color: #ff0000;
 }
 .header--second .header__logo > a > span {
   color: darkgreen;

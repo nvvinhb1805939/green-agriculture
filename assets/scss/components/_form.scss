@@ -27,6 +27,12 @@
     margin-bottom: vars.$small-gap;
     height: 40px;
     width: 450px;
+
+    &--remember {
+      margin-bottom: vars.$small-gap;
+      @extend %flex-center;
+      justify-content: flex-start;
+    }
   }
 
   &__label {
@@ -159,11 +165,29 @@
       width: 0;
       height: 1px;
 
-      background-color: vars.$primary-color;
+      background-color: currentColor;
     }
 
     &:hover::after {
       width: 100%;
     }
+
+    &--second {
+      color: vars.$second-color;
+      &::after {
+        background-color: currentColor;
+      }
+    }
+  }
+
+  &__field--remember &__input,
+  &__field--remember &__label {
+    position: unset;
+    transform: none;
+  }
+
+  &__field--remember &__label {
+    margin-left: 4px;
+    pointer-events: unset;
   }
 }
