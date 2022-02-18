@@ -26,7 +26,7 @@
     position: relative;
     margin-bottom: vars.$small-gap;
     height: 40px;
-    width: 450px;
+    width: 350px;
 
     &--remember {
       margin-bottom: vars.$small-gap;
@@ -149,34 +149,6 @@
 
     & > span {
       color: $light-gray;
-    }
-  }
-
-  &__link {
-    position: relative;
-    color: vars.$primary-color;
-
-    &::after {
-      content: '';
-
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 0;
-      height: 1px;
-
-      background-color: currentColor;
-    }
-
-    &:hover::after {
-      width: 100%;
-    }
-
-    &--second {
-      color: vars.$second-color;
-      &::after {
-        background-color: currentColor;
-      }
     }
   }
 

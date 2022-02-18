@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 /*========================Typhography========================*/
 .content, .header, ::selection, .btn--primary {
-  background-color: darkgreen;
+  background-color: #40aa41;
   color: white;
 }
 
@@ -32,8 +32,8 @@
   line-height: 32px;
 }
 .btn:hover {
-  border-color: darkgreen;
-  color: darkgreen;
+  border-color: #40aa41;
+  color: #40aa41;
 }
 
 .form {
@@ -48,13 +48,13 @@
 .form__heading {
   margin-bottom: 24px;
   font-weight: 400;
-  color: darkgreen;
+  color: #40aa41;
 }
 .form__field {
   position: relative;
   margin-bottom: 15px;
   height: 40px;
-  width: 450px;
+  width: 350px;
 }
 .form__field--remember {
   margin-bottom: 15px;
@@ -81,7 +81,7 @@
   border: 1px solid rgba(0, 0, 0, 0.25);
 }
 .form__input:focus {
-  border: 1px solid darkgreen;
+  border: 1px solid #40aa41;
   box-shadow: 0 0 4px #75e718;
 }
 .form__input:not(:placeholder-shown) + .form__label, .form__input:focus + .form__label {
@@ -89,7 +89,7 @@
   left: 8px;
   padding: 0 4px;
   background-color: white;
-  color: darkgreen;
+  color: #40aa41;
 }
 .form__submit {
   text-transform: uppercase;
@@ -151,28 +151,6 @@
 .form__mesage > span {
   color: #ccc;
 }
-.form__link {
-  position: relative;
-  color: darkgreen;
-}
-.form__link::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background-color: currentColor;
-}
-.form__link:hover::after {
-  width: 100%;
-}
-.form__link--second {
-  color: #ff0000;
-}
-.form__link--second::after {
-  background-color: currentColor;
-}
 .form__field--remember .form__input, .form__field--remember .form__label {
   position: unset;
   transform: none;
@@ -182,9 +160,6 @@
   pointer-events: unset;
 }
 
-.logo {
-  margin-bottom: 30px;
-}
 .logo > a {
   width: fit-content;
   margin-inline: auto;
@@ -195,10 +170,60 @@
   margin-right: 8px;
 }
 .logo > a > span {
-  font-size: 2.4rem;
+  font-size: 2rem;
   text-transform: uppercase;
   font-weight: 500;
+  letter-spacing: 0.1em;
   color: white;
+}
+.logo--vertical > a {
+  flex-direction: column;
+}
+.logo--vertical > a > img {
+  margin-right: 0;
+}
+.logo--second > a > span {
+  color: #40aa41;
+}
+.logo--small > a > img {
+  width: 30px;
+  height: 30px;
+}
+.logo--small > a > span {
+  font-size: 1.6rem;
+}
+.logo--large > a > img {
+  width: 200px;
+  height: 200px;
+}
+.logo--large > a > span {
+  font-size: 4rem;
+}
+
+.link {
+  position: relative;
+  color: inherit;
+}
+.link--primary {
+  color: #40aa41;
+}
+.link--second {
+  color: #007bff;
+}
+.link--regular:hover {
+  color: yellow;
+}
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+}
+.link:hover::after {
+  width: 100%;
 }
 
 *,
@@ -247,13 +272,13 @@ body {
 }
 
 h1 {
-  font-size: 3.2rem;
+  font-size: 2.4rem;
   text-transform: uppercase;
   font-weight: 600;
 }
 
 h4 {
-  font-size: 2.4rem;
+  font-size: 2rem;
 }
 
 .container {
@@ -275,10 +300,6 @@ h4 {
   grid-gap: 15px;
 }
 
-.header--second {
-  background-color: white;
-  color: #212529;
-}
 .header__top {
   padding-block: 8px;
 }
@@ -288,19 +309,36 @@ h4 {
 .header__control {
   text-align: right;
 }
-.header__btn {
-  border: none;
-  background-color: inherit;
+.header__heading {
+  margin-left: 30px;
+  text-transform: none;
+  font-weight: 500;
+  color: #40aa41;
 }
-.header__btn:hover {
-  color: #ff0000;
+.header--second {
+  padding-block: 15px;
+  background-color: white;
+  color: #212529;
 }
-.header--second .header__logo > a > span {
-  color: darkgreen;
+.header--second .header__container {
+  display: flex;
+  align-items: center;
+}
+.header--second .header__logo > a {
+  margin-inline: 0;
 }
 
 .content {
   padding-block: 110px;
+}
+.content__container {
+  display: flex;
+  column-gap: 110px;
+}
+.content__slogan {
+  margin-top: 30px;
+  font-size: 3.2rem;
+  text-align: center;
 }
 
 /*==============Components==============*/

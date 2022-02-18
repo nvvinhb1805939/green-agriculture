@@ -1,7 +1,9 @@
 @use '../abstracts/variables' as vars;
 @use '../abstracts/placeholderSelectors';
 .logo {
-  margin-bottom: vars.$medium-gap;
+  $small-size: 30px;
+  $regular-size: 50px;
+  $large-size: 200px;
 
   & > a {
     @extend %flex-center;
@@ -9,8 +11,8 @@
     margin-inline: auto;
 
     & > img {
-      width: 50px;
-      height: 50px;
+      width: $regular-size;
+      height: $regular-size;
       margin-right: 8px;
     }
 
@@ -18,7 +20,43 @@
       font-size: vars.$large-font-size;
       text-transform: uppercase;
       font-weight: 500;
+      letter-spacing: vars.$large-spacing;
+
       color: vars.$inner-text-color;
+    }
+  }
+
+  &--vertical > a {
+    flex-direction: column;
+
+    & > img {
+      margin-right: 0;
+    }
+  }
+
+  &--second > a > span {
+    color: vars.$primary-color;
+  }
+
+  &--small > a {
+    & > img {
+      width: $small-size;
+      height: $small-size;
+    }
+
+    & > span {
+      font-size: vars.$regular-font-size;
+    }
+  }
+
+  &--large > a {
+    & > img {
+      width: $large-size;
+      height: $large-size;
+    }
+
+    & > span {
+      font-size: vars.$huge-font-size;
     }
   }
 }

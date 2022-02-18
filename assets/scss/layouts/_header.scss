@@ -5,31 +5,37 @@
 .header {
   @extend %darkgreen-white;
 
-  &--second {
-    background-color: vars.$inner-text-color;
-    color: vars.$text-color;
-  }
-
   &__top {
     padding-block: 8px;
   }
+
   &__time {
-    font-size: 1.4rem;
+    font-size: vars.$small-font-size;
   }
 
   &__control {
     text-align: right;
   }
-  &__btn {
-    border: none;
-    background-color: inherit;
 
-    &:hover {
-      color: vars.$second-color;
-    }
+  &__heading {
+    margin-left: vars.$medium-gap;
+    text-transform: none;
+    font-weight: 500;
+    color: vars.$primary-color;
   }
 
-  &--second &__logo > a > span {
-    color: vars.$primary-color;
+  &--second {
+    padding-block: vars.$small-gap;
+    background-color: vars.$inner-text-color;
+    color: vars.$text-color;
+  }
+
+  &--second &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &--second &__logo > a {
+    margin-inline: 0;
   }
 }

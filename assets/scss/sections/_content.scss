@@ -2,6 +2,21 @@
 @use '../abstracts/placeholderSelectors';
 
 .content {
-  padding-block: vars.$big-gap;
+  padding-block: vars.$large-gap;
   @extend %darkgreen-white;
+
+  &__container {
+    display: flex;
+    column-gap: vars.$large-gap;
+  }
+
+  // &__brand {
+  //   display: flex;
+  // }
+
+  &__slogan {
+    margin-top: vars.$medium-gap;
+    font-size: 3.2rem;
+    text-align: center;
+  }
 }

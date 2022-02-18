@@ -3,6 +3,7 @@
 html {
   font-size: 62.5%;
 }
+
 body {
   font-family: vars.$primary-font;
   font-size: vars.$small-font-size;
@@ -10,11 +11,13 @@ body {
   letter-spacing: vars.$regular-spacing;
   color: vars.$text-color;
 }
+
 h1 {
-  font-size: vars.$largest-font-size;
+  font-size: vars.$larger-font-size;
   text-transform: uppercase;
   font-weight: 600;
 }
+
 h4 {
   font-size: vars.$large-font-size;
 }
