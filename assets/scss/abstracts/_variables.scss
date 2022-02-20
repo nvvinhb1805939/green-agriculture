@@ -10,6 +10,8 @@ $second-color: #007bff;
 $text-color: #212529;
 $inner-text-color: white;
 $inner-text-hover-color: yellow;
+$selection-bg-color: #ffc107;
+// $error-color: #dc3545;
 $boder-color: rgba(0, 0, 0, 0.25);
 
 $small-font-size: 1.4rem;
@@ -23,7 +25,13 @@ $small-spacing: 0.025em;
 $regular-spacing: 0.035em;
 $large-spacing: 0.1em;
 
+/*========================Margin &  Padding========================*/
+
 $small-gap: 15px;
 $regular-gap: 24px;
 $medium-gap: 30px;
 $large-gap: 110px;
+
+/*========================Shadow========================*/
+$small-spread: 2px;
+$large-spread: 35px;

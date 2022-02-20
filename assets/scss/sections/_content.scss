@@ -6,13 +6,9 @@
   @extend %darkgreen-white;
 
   &__container {
-    display: flex;
-    column-gap: vars.$large-gap;
+    grid-column-gap: vars.$large-gap;
+    align-items: center;
   }
-
-  // &__brand {
-  //   display: flex;
-  // }
 
   &__slogan {
     margin-top: vars.$medium-gap;

@@ -1,0 +1,14 @@
+@use '../abstracts/variables' as vars;
+
+.nav {
+  text-align: center;
+
+  &__link {
+    text-transform: uppercase;
+    font-weight: 600;
+
+    & ~ & {
+      margin-left: vars.$small-gap;
+    }
+  }
+}

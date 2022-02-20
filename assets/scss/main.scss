@@ -3,13 +3,18 @@
 @use './components/form';
 @use './components/logo';
 @use './components/link';
+@use './components/nav';
 
 /*==============Core==============*/
 @use './core/reset';
 @use './core/typography';
+
 /*==============Layouts==============*/
 @use './layouts/grid';
 @use './layouts/header';
+@use './layouts/footer';
+
 /*==============Sections==============*/
 @use './sections/content';
+
 /*==============Pages==============*/

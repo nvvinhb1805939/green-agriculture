@@ -3,7 +3,12 @@
 @use '../abstracts/mixins' as mixs;
 
 .btn {
+  position: relative;
+  z-index: 1;
   border-radius: 2px;
+
+  background: none;
+  color: vars.$inner-text-color;
   border: 0;
 
   font-size: inherit;
@@ -23,12 +28,26 @@
     @include mixs.set-height(32px);
   }
 
-  &--primary {
-    @extend %darkgreen-white;
+  &--primary::before {
+    content: '';
+
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    border-radius: inherit;
+    @include mixs.set-inset-shadow(vars.$large-spread, vars.$primary-color);
   }
 
-  &:hover {
-    border-color: vars.$primary-color;
+  &--primary:hover {
     color: vars.$primary-color;
+  }
+
+  &--primary:hover::before {
+    @include mixs.set-inset-shadow(vars.$small-spread, vars.$primary-color);
+  }
+
+  &--second {
+    color: vars.$text-color;
   }
 }

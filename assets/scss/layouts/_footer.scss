@@ -1,0 +1,33 @@
+@use '../abstracts/variables' as vars;
+
+.footer {
+  padding-block: vars.$medium-gap;
+
+  &__nav {
+    margin-top: vars.$medium-gap;
+    color: vars.$second-color;
+  }
+
+  &__contact {
+    padding-block: vars.$medium-gap;
+    margin-block: vars.$medium-gap;
+    border-top: 1px solid vars.$boder-color;
+    border-bottom: 1px solid vars.$boder-color;
+  }
+
+  &__item {
+    text-align: center;
+
+    & ~ & {
+      margin-top: vars.$small-gap;
+    }
+
+    & > a {
+      color: vars.$primary-color;
+    }
+  }
+
+  &__copyright {
+    text-align: center;
+  }
+}

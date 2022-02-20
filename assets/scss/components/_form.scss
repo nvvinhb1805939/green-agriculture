@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mixs;
 @use '../abstracts/placeholderSelectors';
 
 .form {
@@ -7,7 +8,7 @@
   $left: calc((vars.$regular-gap / 2));
   $light-gray: #ccc;
 
-  width: fit-content;
+  max-width: 450px;
   margin-inline: auto;
   padding: vars.$medium-gap;
 
@@ -26,7 +27,6 @@
     position: relative;
     margin-bottom: vars.$small-gap;
     height: 40px;
-    width: 350px;
 
     &--remember {
       margin-bottom: vars.$small-gap;
@@ -62,8 +62,7 @@
   }
 
   &__input:focus {
-    border: 1px solid $border-color;
-    box-shadow: 0 0 4px #75e718;
+    border: vars.$small-spread solid vars.$primary-color;
   }
 
   &__input:not(:placeholder-shown) + &__label,
@@ -79,11 +78,6 @@
 
   &__submit {
     text-transform: uppercase;
-
-    &:hover {
-      color: vars.$inner-text-color;
-      opacity: 0.8;
-    }
   }
 
   &__split {

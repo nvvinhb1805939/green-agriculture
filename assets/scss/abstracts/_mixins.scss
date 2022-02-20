@@ -2,3 +2,7 @@
   height: $height;
   line-height: $height;
 }
+
+@mixin set-inset-shadow($spread, $color) {
+  box-shadow: inset 0 0 0 $spread $color;
+}
