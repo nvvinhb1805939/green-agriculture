@@ -5,29 +5,157 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nông Nghiệp Xanh</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+      integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+      crossorigin="anonymous"
+    />
     <link rel="shortcut icon" href="../assets/images/logo.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../assets/css/main.css" />
   </head>
   <body>
     <header class="header">
       <div class="container">
-        <div class="header__top grid grid--2">
-          <p class="header__time">
-            <span class="header__day">Thứ hai</span>
-            <span class="header__date">14/02/2022</span>
-            <span> | </span>
-            <span class="header__hour">12:11</span>
-            <span>GMT +7</span>
-          </p>
+        <div class="header__top">
+          <div class="header__logo logo logo--small">
+            <a href="#">
+              <img src="../assets/images/logo.png" alt="logo" class="header__img" />
+              <span>Nông Nghiệp Xanh</span>
+            </a>
+          </div>
+          <div class="header__search">
+            <form class="header__form">
+              <input class="header__input" type="text" />
+              <button class="header__btn btn btn--small btn--primary"><i class="fas fa-search"></i></button>
+            </form>
+          </div>
           <div class="header__control">
             <a href="../Authencation/signup.html" class="link link--regular">Đăng ký</a>
             <span> | </span>
             <a href="../Authencation/login.html" class="link link--regular">Đăng nhập</a>
           </div>
         </div>
+        <nav class="header__nav nav">
+          <a href="#" class="nav__link link link--regular link--bold active"><i class="link__icon fas fa-home"></i></a>
+          <a href="#" class="nav__link link link--regular link--bold">Nông nghiệp 4.0</a>
+          <a href="#" class="nav__link link link--regular link--bold">Sản vật địa phương</a>
+          <a href="#" class="nav__link link link--regular link--bold">Organic</a>
+          <a href="#" class="nav__link link link--regular link--bold">Tài chính</a>
+        </nav>
       </div>
     </header>
-    <main class="main"></main>
-    <footer class="footer"></footer>
+    <main class="main main--block container">
+      <section class="featured">
+        <div class="featured__top grid">
+          <article class="article article--span-3">
+            <img src="../assets/images/News/xuat-khau-xoai-dong-thap.jpeg" alt="img" class="article__img" />
+            <div class="article__info">
+              <h2 class="article__heading">
+                <a href="#" class="article__link">Xuất khẩu lô xoài đầu năm của Đồng Tháp sang Châu Âu</a>
+              </h2>
+              <div class="article__category">
+                <a href="#" class="article__link">Doanh nghiệp</a>
+              </div>
+              <p class="article__intro">
+                UBND tỉnh Đồng Tháp phối hợp cùng Bộ Công Thương vừa tổ chức lễ công bố xuất khẩu lô xoài đầu tiên năm
+                2022 sang thị trường Châu Âu
+              </p>
+            </div>
+          </article>
+          <article class="article">
+            <img src="../assets/images/News/chi-phi-tang-vot.jpg" alt="img" class="article__img" />
+            <div class="article__info">
+              <h2 class="article__heading">
+                <a href="#" class="article__link"
+                  >Chi phí đầu vào tăng vọt, giá khoai tây Bắc Ireland sẽ tăng tới 30%?</a
+                >
+              </h2>
+              <div class="article__category">
+                <a href="#" class="article__link">Nông sản thế giới</a>
+              </div>
+              <p class="article__intro">
+                Các đại diện trong ngành dự báo giá khoai tây Bắc Ireland có thể tăng tới 30%, nguyên nhân xuất phát từ
+                việc tăng giá chưa từng có của tất cả chi phí đầu vào.
+              </p>
+            </div>
+          </article>
+        </div>
+        <div class="featured__bottom grid">
+          <article class="article">
+            <img src="../assets/images/News/chi-phi-tang-vot.jpg" alt="img" class="article__img" />
+            <div class="article__info">
+              <h2 class="article__heading">
+                <a href="#" class="article__link">Măng vầu, đặc sản núi rừng</a>
+              </h2>
+              <div class="article__category">
+                <a href="#" class="article__link">Sản vật địa phương</a>
+              </div>
+            </div>
+          </article>
+          <article class="article">
+            <img src="../assets/images/News/chi-phi-tang-vot.jpg" alt="img" class="article__img" />
+            <div class="article__info">
+              <h2 class="article__heading">
+                <a href="#" class="article__link">Măng vầu, đặc sản núi rừng</a>
+              </h2>
+              <div class="article__category">
+                <a href="#" class="article__link">Sản vật địa phương</a>
+              </div>
+            </div>
+          </article>
+          <article class="article">
+            <img src="../assets/images/News/chi-phi-tang-vot.jpg" alt="img" class="article__img" />
+            <div class="article__info">
+              <h2 class="article__heading">
+                <a href="#" class="article__link">Măng vầu, đặc sản núi rừng</a>
+              </h2>
+              <div class="article__category">
+                <a href="#" class="article__link">Sản vật địa phương</a>
+              </div>
+            </div>
+          </article>
+          <article class="article">
+            <img src="../assets/images/News/chi-phi-tang-vot.jpg" alt="img" class="article__img" />
+            <div class="article__info">
+              <h2 class="article__heading">
+                <a href="#" class="article__link">Măng vầu, đặc sản núi rừng</a>
+              </h2>
+              <div class="article__category">
+                <a href="#" class="article__link">Sản vật địa phương</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__logo logo logo--second logo--regular">
+          <a href="#">
+            <img src="../assets/images/logo.png" alt="logo" class="header__img" />
+            <span>Nông Nghiệp Xanh</span>
+          </a>
+        </div>
+        <nav class="footer__nav nav">
+          <a href="#" class="nav__link link link--bold">Nông nghiệp 4.0</a>
+          <a href="#" class="nav__link link link--bold">Sản vật địa phương</a>
+          <a href="#" class="nav__link link link--bold">Organic</a>
+          <a href="#" class="nav__link link link--bold">Tài chính</a>
+        </nav>
+        <div class="footer__contact">
+          <ul class="footer__list">
+            <li class="footer__item">Địa chỉ: Đại học Cần Thơ Khu II, 3/2, Xuân Khánh, Ninh Kiều, Cần Thơ</li>
+            <li class="footer__item">
+              Email: <a href="mailto:nongnghiepxanh@gmail.com" class="link">nongnghiepxanh@gmail.com</a>
+            </li>
+            <li class="footer__item">Hotline: <a href="tel:0123456789" class="link">0123456789</a></li>
+          </ul>
+        </div>
+        <div class="footer__copyright">
+          <p>© Nông Nghiệp Xanh - Nền tảng thương mại điện tử dành cho thị trường nông nghiệp Việt Nam</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

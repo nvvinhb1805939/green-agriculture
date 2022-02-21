@@ -10,6 +10,11 @@
     align-items: center;
   }
 
+  &__brand,
+  &__form {
+    grid-column: span 2;
+  }
+
   &__slogan {
     margin-top: vars.$medium-gap;
     font-size: 3.2rem;

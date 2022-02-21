@@ -36,4 +36,10 @@ img {
 input {
   outline: none;
   border: 0;
+  font-size: inherit;
+  letter-spacing: inherit;
+}
+
+i {
+  transition: none;
 }

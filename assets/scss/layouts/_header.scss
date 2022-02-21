@@ -3,18 +3,42 @@
 @use '../abstracts/placeholderSelectors';
 
 .header {
+  $form-gap: calc((vars.$regular-gap / 2));
+
   @extend %darkgreen-white;
 
   &__top {
-    padding-block: 8px;
+    column-gap: calc(vars.$medium-gap * 2);
+    padding-block: vars.$small-gap;
   }
 
-  &__time {
-    font-size: vars.$small-font-size;
+  &__search {
+    flex: 1;
+  }
+
+  &__form {
+    height: 40px;
+    background-color: vars.$inner-text-color;
+    border-radius: vars.$small-radius;
+    overflow: hidden;
+  }
+
+  &__input {
+    flex: 1;
+    padding: $form-gap;
+  }
+
+  &__btn {
+    margin-right: vars.$small-radius;
+    padding-inline: vars.$small-gap;
   }
 
   &__control {
     text-align: right;
+  }
+
+  &__nav {
+    padding-bottom: vars.$small-gap;
   }
 
   &__heading {
@@ -30,7 +54,9 @@
     color: vars.$primary-color;
   }
 
-  &--second &__container {
+  &--second &__container,
+  &__top,
+  &__form {
     display: flex;
     align-items: center;
   }

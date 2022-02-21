@@ -4,6 +4,7 @@
 @use './components/logo';
 @use './components/link';
 @use './components/nav';
+@use './components/article';
 
 /*==============Core==============*/
 @use './core/reset';
@@ -12,6 +13,7 @@
 /*==============Layouts==============*/
 @use './layouts/grid';
 @use './layouts/header';
+@use './layouts/main';
 @use './layouts/footer';
 
 /*==============Sections==============*/

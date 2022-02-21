@@ -7,13 +7,14 @@
 
   & > a {
     @extend %flex-center;
+
+    flex-direction: column;
     width: fit-content;
     margin-inline: auto;
 
     & > img {
       width: $regular-size;
       height: $regular-size;
-      margin-right: 8px;
     }
 
     & > span {
@@ -23,14 +24,6 @@
       letter-spacing: vars.$large-spacing;
 
       color: vars.$inner-text-color;
-    }
-  }
-
-  &--vertical > a {
-    flex-direction: column;
-
-    & > img {
-      margin-right: 0;
     }
   }
 

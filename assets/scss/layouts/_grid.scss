@@ -9,14 +9,6 @@
 .grid {
   display: grid;
   grid-auto-rows: 1fr;
-
-  &--2 {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: vars.$medium-gap;
-  }
-
-  &--5 {
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: vars.$small-gap;
-  }
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: vars.$medium-gap;
 }

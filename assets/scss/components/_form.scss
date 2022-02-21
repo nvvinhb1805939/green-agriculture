@@ -14,7 +14,7 @@
 
   color: vars.$text-color;
   background-color: $bg-color;
-  border-radius: 4px;
+  border-radius: vars.$small-radius;
   box-shadow: rgba($color: vars.$text-color, $alpha: 0.2) 0px 3px 10px 0px;
 
   &__heading {
@@ -52,7 +52,7 @@
     inset: 0;
     padding: $left;
 
-    border-radius: 4px;
+    border-radius: vars.$small-radius;
     font-size: vars.$small-font-size;
     letter-spacing: vars.$large-spacing;
   }
@@ -125,7 +125,7 @@
 
     &:hover {
       border-color: vars.$boder-color;
-      background-color: #eee;
+      background-color: vars.$footer-bg-color;
       color: vars.$text-color;
     }
   }

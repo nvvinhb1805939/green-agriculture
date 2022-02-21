@@ -1,0 +1,7 @@
+@use '../abstracts/variables' as vars;
+
+.main {
+  &--block {
+    padding-block: vars.$medium-gap;
+  }
+}
