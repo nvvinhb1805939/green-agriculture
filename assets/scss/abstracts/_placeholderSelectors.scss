@@ -10,3 +10,7 @@
   justify-content: center;
   align-items: center;
 }
+
+%border-bottom {
+  border-bottom: 1px solid vars.$boder-color;
+}

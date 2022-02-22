@@ -13,10 +13,10 @@
 /*==============Layouts==============*/
 @use './layouts/grid';
 @use './layouts/header';
-@use './layouts/main';
 @use './layouts/footer';
 
 /*==============Sections==============*/
 @use './sections/content';
 
 /*==============Pages==============*/
+@use './pages/News/home';

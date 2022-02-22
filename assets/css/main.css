@@ -14,6 +14,10 @@
   align-items: center;
 }
 
+.featured__top, .featured__bottom, .article--medium {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
 .btn {
   position: relative;
   z-index: 1;
@@ -254,8 +258,64 @@
   margin-left: 15px;
 }
 
-.article--span-3 {
-  grid-column: span 3;
+.article {
+  display: flex;
+  flex-direction: column;
+}
+.article--big, .article--medium, .article--small {
+  flex-direction: row;
+  height: fit-content;
+}
+.article--big {
+  background-color: #eee;
+}
+.article--big .article__info {
+  padding-inline: 24px;
+}
+.article--big .article__heading {
+  font-size: 2.4rem;
+}
+.article--medium .article__info {
+  padding-inline: 15px;
+}
+.article--medium .article__heading, .article--small .article__heading {
+  margin-top: 0;
+}
+.article--small {
+  flex-direction: row-reverse;
+  column-gap: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+.article--small .article__link {
+  flex-shrink: unset;
+  flex-basis: 25%;
+}
+.article--small .article__info {
+  flex-basis: 75%;
+}
+.article__link {
+  flex-shrink: 0;
+}
+.article__img {
+  width: 100%;
+  height: 100%;
+}
+.article__heading {
+  margin-top: 15px;
+}
+.article__heading--small {
+  font-size: 1.6rem;
+}
+.article__heading .article__link:hover {
+  color: #40aa41;
+}
+.article__category .article__link {
+  margin-block: 8px;
+  color: #007bff;
+}
+.article__intro {
+  margin-bottom: 15px;
 }
 
 *,
@@ -289,6 +349,7 @@ li {
 img {
   display: block;
   max-width: 100%;
+  object-fit: cover;
 }
 
 input {
@@ -320,6 +381,11 @@ h1 {
   font-weight: 600;
 }
 
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
 h4 {
   font-size: 2rem;
 }
@@ -335,6 +401,21 @@ h4 {
   grid-auto-rows: 1fr;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
+}
+.grid--12 {
+  grid-template-columns: repeat(12, 1fr);
+}
+.grid--span-2 {
+  grid-column: span 2;
+}
+.grid--span-3 {
+  grid-column: span 3;
+}
+.grid--span-4 {
+  grid-column: span 4;
+}
+.grid--span-5 {
+  grid-column: span 5;
 }
 
 .header__top {
@@ -383,10 +464,6 @@ h4 {
   margin-inline: 0;
 }
 
-.main--block {
-  padding-block: 30px;
-}
-
 .footer {
   padding-block: 30px;
   background-color: #eee;
@@ -428,6 +505,34 @@ h4 {
   margin-top: 30px;
   font-size: 3.2rem;
   text-align: center;
+}
+
+/*==============Featured==============*/
+section {
+  margin-block: 30px;
+}
+
+.featured__top, .featured__bottom {
+  margin-bottom: 24px;
+}
+
+.market,
+.agriculturue {
+  margin-block: 30px;
+}
+
+.news__heading {
+  margin-bottom: 24px;
+}
+
+.news__link {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #40aa41;
+}
+.news__link > i {
+  margin-right: 8px;
 }
 
 /*==============Components==============*/
