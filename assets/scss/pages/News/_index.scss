@@ -1,0 +1,93 @@
+@use '../../abstracts/variables' as vars;
+@use '../../abstracts/placeholderSelectors';
+
+/*==============Common==============*/
+$gap: vars.$medium-gap;
+$border-width: 1px;
+
+.news__grid {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: $border-width;
+    left: 50%;
+    transform: translateX(-50%) + $border-width;
+
+    width: $border-width;
+    height: $gap;
+    background-color: vars.$inner-text-color;
+  }
+
+  & section:first-of-type {
+    padding-right: vars.$small-gap;
+  }
+
+  & section:last-of-type {
+    border-left: $border-width solid vars.$boder-color;
+    padding-left: vars.$small-gap;
+  }
+}
+
+.news-main {
+  padding-bottom: $gap;
+}
+
+.news-section {
+  margin-top: $gap;
+}
+
+.news__container {
+  grid-row-gap: 0;
+
+  & article:first-of-type {
+    @extend %border-bottom;
+  }
+
+  & article:not(:first-of-type) {
+    margin-top: vars.$regular-gap;
+  }
+}
+
+.news__heading {
+  margin-bottom: vars.$regular-gap;
+}
+
+.news__link {
+  text-transform: uppercase;
+  font-size: vars.$larger-font-size;
+  font-weight: 500;
+  color: vars.$primary-color;
+
+  & > i {
+    margin-right: 8px;
+  }
+}
+
+/*==============Featured==============*/
+.featured {
+  &__top,
+  &__bottom {
+    @extend %border-bottom;
+    margin-bottom: vars.$regular-gap;
+  }
+}
+
+/*==============Latest==============*/
+.latest {
+  padding-bottom: vars.$small-gap;
+  @extend %border-bottom;
+}
+
+/*==============Others==============*/
+.market,
+.agriculturue,
+.local,
+.organic,
+.enterprise,
+.financy,
+.world,
+.cuisine {
+  @extend %border-bottom;
+}

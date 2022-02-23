@@ -1,0 +1,23 @@
+@use '../../abstracts/variables' as vars;
+@use '../../abstracts/placeholderSelectors';
+
+.authen-content {
+  padding-block: vars.$large-gap;
+  @extend %darkgreen-white;
+
+  &__container {
+    grid-column-gap: vars.$large-gap;
+    align-items: center;
+  }
+
+  &__brand,
+  &__form {
+    grid-column: span 2;
+  }
+
+  &__slogan {
+    margin-top: vars.$medium-gap;
+    font-size: 3.2rem;
+    text-align: center;
+  }
+}

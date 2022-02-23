@@ -16,7 +16,7 @@
 @use './layouts/footer';
 
 /*==============Sections==============*/
-@use './sections/content';
 
 /*==============Pages==============*/
-@use './pages/News/home';
+@use './pages/News/index' as news-index;
+@use './pages/Authen/index' as authen-index;

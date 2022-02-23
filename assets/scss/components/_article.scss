@@ -2,7 +2,7 @@
 @use '../abstracts/placeholderSelectors';
 
 .article {
-  $regular-gap: calc(vars.$medium-gap / 2);
+  $regular-gap: calc(vars.$regular-gap / 2);
   $small-gap: 8px;
 
   display: flex;
@@ -19,6 +19,10 @@
     background-color: vars.$footer-bg-color;
   }
 
+  &--big &__link {
+    flex-basis: 66.67%;
+  }
+
   &--big &__info {
     padding-inline: vars.$regular-gap;
   }
@@ -29,10 +33,23 @@
 
   &--medium {
     @extend %border-bottom;
+    padding-bottom: vars.$small-gap;
+
+    & ~ & {
+      margin-top: vars.$small-gap;
+    }
+
+    &:last-of-type {
+      border: none;
+    }
+  }
+
+  &--medium &__link {
+    flex-basis: 33.33%;
   }
 
   &--medium &__info {
-    padding-inline: $regular-gap;
+    padding-inline: vars.$small-gap;
   }
 
   &--medium &__heading,
@@ -48,12 +65,7 @@
   }
 
   &--small &__link {
-    flex-shrink: unset;
     flex-basis: 25%;
-  }
-
-  &--small &__info {
-    flex-basis: 75%;
   }
 
   &__link {
@@ -80,6 +92,10 @@
   &__category &__link {
     margin-block: $small-gap;
     color: vars.$second-color;
+  }
+
+  &__info {
+    padding-bottom: $small-gap;
   }
 
   &__intro {
