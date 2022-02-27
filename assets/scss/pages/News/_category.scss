@@ -1,0 +1,24 @@
+@use '../../abstracts/variables' as vars;
+@use '../../abstracts/placeholderSelectors';
+
+.news-category {
+  &__heading {
+    padding-block: vars.$medium-gap;
+    text-transform: uppercase;
+  }
+
+  &-feature {
+    padding-bottom: vars.$small-gap;
+    @extend %border-bottom;
+  }
+
+  &-list {
+    padding-block: vars.$medium-gap;
+  }
+
+  &__link {
+    margin-bottom: vars.$medium-gap;
+    font-size: vars.$large-font-size;
+    text-align: center;
+  }
+}

@@ -3,6 +3,7 @@
 .link {
   position: relative;
   color: inherit;
+  cursor: pointer;
 
   &--primary {
     color: vars.$primary-color;

@@ -28,7 +28,8 @@
     @include mixs.set-height(32px);
   }
 
-  &--primary::before {
+  &--primary::before,
+  &--cancel::before {
     content: '';
 
     position: absolute;
@@ -36,18 +37,42 @@
     z-index: -1;
 
     border-radius: inherit;
-    @include mixs.set-inset-shadow(vars.$large-spread, vars.$primary-color);
   }
 
-  &--primary:hover {
-    color: vars.$primary-color;
+  &--primary {
+    &::before {
+      @include mixs.set-inset-shadow(vars.$large-spread, vars.$primary-color);
+    }
+
+    &:hover {
+      color: vars.$primary-color;
+    }
+
+    &:hover::before {
+      @include mixs.set-inset-shadow(vars.$small-spread, vars.$primary-color);
+    }
   }
 
-  &--primary:hover::before {
-    @include mixs.set-inset-shadow(vars.$small-spread, vars.$primary-color);
+  &--cancel {
+    &::before {
+      @include mixs.set-inset-shadow(vars.$large-spread, vars.$second-color);
+    }
+
+    &:hover {
+      color: vars.$second-color;
+    }
+
+    &:hover::before {
+      @include mixs.set-inset-shadow(vars.$small-spread, vars.$second-color);
+    }
   }
 
   &--second {
     color: vars.$text-color;
+  }
+
+  &--round {
+    aspect-ratio: 1;
+    border-radius: 50%;
   }
 }

@@ -14,3 +14,7 @@
 %border-bottom {
   border-bottom: 1px solid vars.$boder-color;
 }
+
+%mb-regular {
+  margin-bottom: vars.$regular-gap;
+}

@@ -8,16 +8,24 @@ $border-width: 1px;
 .news__grid {
   position: relative;
 
+  &::before,
   &::after {
     content: '';
     position: absolute;
-    bottom: $border-width;
     left: 50%;
     transform: translateX(-50%) + $border-width;
 
     width: $border-width;
     height: $gap;
     background-color: vars.$inner-text-color;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: $border-width;
   }
 
   & section:first-of-type {
@@ -34,10 +42,6 @@ $border-width: 1px;
   padding-bottom: $gap;
 }
 
-.news-section {
-  margin-top: $gap;
-}
-
 .news__container {
   grid-row-gap: 0;
 
@@ -51,7 +55,11 @@ $border-width: 1px;
 }
 
 .news__heading {
-  margin-bottom: vars.$regular-gap;
+  padding-block: vars.$medium-gap;
+
+  & > span {
+    cursor: default;
+  }
 }
 
 .news__link {
@@ -67,6 +75,8 @@ $border-width: 1px;
 
 /*==============Featured==============*/
 .featured {
+  margin-top: vars.$medium-gap;
+
   &__top,
   &__bottom {
     @extend %border-bottom;

@@ -68,10 +68,12 @@
   &__input:not(:placeholder-shown) + &__label,
   &__input:focus + &__label {
     $inline: 4px;
+
     top: 0;
     left: calc($left - $inline);
     padding: 0 $inline;
 
+    font-weight: 500;
     background-color: $bg-color;
     color: $border-color;
   }

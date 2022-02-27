@@ -1,0 +1,121 @@
+@use '../../abstracts/variables' as vars;
+@use '../../abstracts/placeholderSelectors';
+
+.news-detail-content {
+  $opacity: 0.8;
+
+  padding-bottom: vars.$medium-gap;
+  font-size: vars.$regular-font-size;
+  text-align: justify;
+
+  @extend %border-bottom;
+
+  &__heading {
+    @extend %mb-regular;
+
+    font-size: vars.$largest-font-size;
+    font-weight: 500;
+    text-transform: unset;
+  }
+
+  &__time {
+    @extend %mb-regular;
+
+    opacity: $opacity;
+  }
+
+  &__intro {
+    @extend %mb-regular;
+
+    font-weight: 700;
+  }
+
+  &__title {
+    @extend %mb-regular;
+
+    font-weight: 700;
+  }
+
+  &__paragraph {
+    @extend %mb-regular;
+  }
+
+  &__figure {
+    @extend %mb-regular;
+  }
+
+  &__caption {
+    padding: 8px 4px;
+    font-size: vars.$small-font-size;
+    text-align: center;
+    background-color: vars.$footer-bg-color;
+  }
+
+  &__blockquote {
+    @extend %mb-regular;
+
+    padding: vars.$small-gap;
+
+    @extend %darkgreen-white;
+
+    & > q {
+      font-weight: 500;
+      font-style: italic;
+    }
+
+    & > p {
+      margin-top: vars.$small-gap;
+    }
+  }
+
+  &__signature {
+    font-weight: 700;
+  }
+
+  &__source {
+    margin-top: 8px;
+    font-weight: 500;
+    opacity: $opacity;
+  }
+}
+
+.news-detail-comment {
+  margin-top: vars.$medium-gap;
+  padding-bottom: vars.$medium-gap;
+
+  @extend %border-bottom;
+
+  &__form {
+    padding: vars.$small-gap;
+    border: 1px dashed vars.$boder-color;
+    border-radius: vars.$small-radius;
+  }
+
+  &__group {
+    display: flex;
+    column-gap: vars.$small-gap;
+  }
+
+  &__input {
+    flex-basis: 50%;
+  }
+
+  &__txtarea {
+    min-height: 100px;
+  }
+
+  &__btn {
+    min-width: 100px;
+
+    & > button {
+      width: 100%;
+      position: unset;
+    }
+  }
+}
+
+.news-detail-other {
+  &__list {
+    padding-bottom: vars.$medium-gap;
+  }
+}

@@ -19,4 +19,6 @@
 
 /*==============Pages==============*/
 @use './pages/News/index' as news-index;
+@use './pages/News/category' as news-category;
+@use './pages/News/detail' as news-detail;
 @use './pages/Authen/index' as authen-index;

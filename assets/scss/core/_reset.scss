@@ -34,11 +34,17 @@ img {
   object-fit: cover;
 }
 
-input {
+input,
+textarea {
+  font-family: inherit;
   outline: none;
   border: 0;
   font-size: inherit;
   letter-spacing: inherit;
+}
+
+textarea {
+  resize: none;
 }
 
 i {
