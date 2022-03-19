@@ -1,7 +1,7 @@
-@use '../../abstracts/variables' as vars;
-@use '../../abstracts/placeholderSelectors';
+@use '../abstracts/variables' as vars;
+@use '../abstracts/placeholderSelectors';
 
-.news-detail-content {
+.detail-content {
   $opacity: 0.8;
 
   padding-bottom: vars.$medium-gap;
@@ -18,12 +18,6 @@
     text-transform: unset;
   }
 
-  &__time {
-    @extend %mb-regular;
-
-    opacity: $opacity;
-  }
-
   &__intro {
     @extend %mb-regular;
 
@@ -34,21 +28,6 @@
     @extend %mb-regular;
 
     font-weight: 700;
-  }
-
-  &__paragraph {
-    @extend %mb-regular;
-  }
-
-  &__figure {
-    @extend %mb-regular;
-  }
-
-  &__caption {
-    padding: 8px 4px;
-    font-size: vars.$small-font-size;
-    text-align: center;
-    background-color: vars.$footer-bg-color;
   }
 
   &__blockquote {
@@ -79,42 +58,66 @@
   }
 }
 
-.news-detail-comment {
-  margin-top: vars.$medium-gap;
-  padding-bottom: vars.$medium-gap;
-
+.detail-comment {
   @extend %border-bottom;
 
+  padding-block: vars.$medium-gap vars.$small-gap;
+
   &__form {
-    padding: vars.$small-gap;
-    border: 1px dashed vars.$boder-color;
-    border-radius: vars.$small-radius;
+    width: 100%;
+  }
+
+  &__field {
+    min-height: vars.$large-gap;
+  }
+
+  &__input {
+    overflow: auto;
   }
 
   &__group {
     display: flex;
+    justify-content: flex-end;
     column-gap: vars.$small-gap;
-  }
 
-  &__input {
-    flex-basis: 50%;
-  }
-
-  &__txtarea {
-    min-height: 100px;
+    &--second {
+      justify-content: flex-start;
+      margin-block: vars.$small-gap vars.$regular-gap;
+    }
   }
 
   &__btn {
-    min-width: 100px;
+    position: relative;
+    width: fit-content;
+    min-width: vars.$large-gap;
+  }
 
-    & > button {
-      width: 100%;
-      position: unset;
-    }
+  &__item {
+    display: flex;
+    column-gap: vars.$small-gap;
+  }
+
+  &__heading {
+    margin-bottom: vars.$small-gap;
+  }
+
+  &__name {
+    font-weight: 500;
+    color: vars.$second-color;
+  }
+
+  &__time {
+    margin-left: vars.$small-gap;
+    font-size: vars.$smallest-font-size;
+    font-weight: 500;
+  }
+
+  &__text {
+    font-size: vars.$regular-font-size;
   }
 }
 
-.news-detail-other {
+.detail-other {
   &__list {
     padding-bottom: vars.$medium-gap;
   }

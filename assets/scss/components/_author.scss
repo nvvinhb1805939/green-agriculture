@@ -1,0 +1,47 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/placeholderSelectors';
+
+.author {
+  $gap: 8px;
+
+  @extend %mb-regular;
+  @extend %flex-center;
+  justify-content: flex-start;
+  column-gap: vars.$small-gap;
+
+  padding: vars.$small-gap;
+  width: fit-content;
+  border: 1px dashed vars.$primary-color;
+  border-radius: vars.$small-radius;
+
+  &__name {
+    color: vars.$primary-color;
+    font-size: vars.$regular-font-size;
+    font-weight: 500;
+  }
+
+  &__avt {
+    border-radius: 50%;
+  }
+
+  &__time-comment {
+    @extend %flex-center;
+    column-gap: $gap;
+    font-size: vars.$small-font-size;
+  }
+
+  &__time {
+    opacity: 0.8;
+  }
+
+  &__comment {
+    @extend %flex-center;
+
+    &::before {
+      content: '•';
+
+      margin-right: $gap;
+      font-size: vars.$large-font-size;
+    }
+  }
+}

@@ -5,6 +5,11 @@
 @use './components/link';
 @use './components/nav';
 @use './components/article';
+@use './components/paragraph';
+@use './components/figure';
+@use './components/avatar';
+@use './components/author';
+@use './components/heading';
 
 /*==============Core==============*/
 @use './core/reset';
@@ -20,5 +25,6 @@
 /*==============Pages==============*/
 @use './pages/News/index' as news-index;
 @use './pages/News/category' as news-category;
-@use './pages/News/detail' as news-detail;
 @use './pages/Authen/index' as authen-index;
+@use './pages/Forums/index' as forums-index;
+@use './pages/detail';

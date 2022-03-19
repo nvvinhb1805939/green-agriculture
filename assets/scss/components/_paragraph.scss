@@ -1,0 +1,8 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/placeholderSelectors';
+.paragraph {
+  @extend %mb-regular;
+
+  font-size: vars.$regular-font-size;
+  text-align: justify;
+}

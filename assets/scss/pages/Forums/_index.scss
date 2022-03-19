@@ -1,0 +1,12 @@
+@use '../../abstracts/variables' as vars;
+@use '../../abstracts/placeholderSelectors';
+.forums-heading {
+  padding-block: vars.$medium-gap;
+
+  &__title {
+    margin-bottom: vars.$regular-gap;
+    font-size: vars.$largest-font-size;
+    text-transform: unset;
+    color: vars.$primary-color;
+  }
+}

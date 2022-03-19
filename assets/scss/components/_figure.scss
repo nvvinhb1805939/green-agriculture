@@ -1,0 +1,12 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/placeholderSelectors';
+.figure {
+  @extend %mb-regular;
+
+  &__caption {
+    padding: 8px 4px;
+    font-size: vars.$small-font-size;
+    text-align: center;
+    background-color: vars.$footer-bg-color;
+  }
+}

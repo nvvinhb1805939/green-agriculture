@@ -1,0 +1,16 @@
+@use '../abstracts/variables' as vars;
+
+.heading {
+  padding-block: vars.$medium-gap;
+
+  &__link {
+    text-transform: uppercase;
+    font-size: vars.$larger-font-size;
+    font-weight: 500;
+    color: vars.$primary-color;
+
+    & > i {
+      margin-right: 8px;
+    }
+  }
+}

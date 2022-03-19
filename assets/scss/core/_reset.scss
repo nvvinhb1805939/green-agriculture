@@ -14,6 +14,28 @@
   background-color: vars.$selection-bg-color;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: vars.$small-radius;
+}
+
+::-webkit-scrollbar-thumb {
+  background: vars.$primary-color;
+  border-radius: vars.$small-radius;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: vars.$selection-bg-color;
+}
+
+textarea::-webkit-scrollbar {
+  width: 4px;
+}
+
 html {
   scroll-behavior: smooth;
 }

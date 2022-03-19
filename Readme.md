@@ -13,6 +13,9 @@ News
 |  |__ details.html
 E-Commerce
 |__ index.html
+|__Category
+    |__index.html
+    
 Manager
 |__ index.html
 Authencation
