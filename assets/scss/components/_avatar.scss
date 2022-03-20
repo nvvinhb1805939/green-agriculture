@@ -8,6 +8,11 @@
   border: 2px solid vars.$primary-color;
   border-radius: 50%;
 
+  &--large {
+    width: vars.$large-gap;
+    height: vars.$large-gap;
+  }
+
   & > img {
     border-radius: inherit;
     width: 100%;

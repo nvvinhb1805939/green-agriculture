@@ -1,0 +1,19 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/placeholderSelectors';
+.cover {
+  @extend %flex-center;
+  flex-direction: column;
+  gap: vars.$small-gap;
+  padding-block: vars.$medium-gap;
+
+  text-align: center;
+
+  &__quantity-post {
+    color: rgba($color: vars.$text-color, $alpha: 0.8);
+
+    & > span {
+      font-weight: 500;
+      color: vars.$text-color;
+    }
+  }
+}

@@ -4,6 +4,7 @@
 
 .header {
   $form-gap: calc((vars.$regular-gap / 2));
+  $size: vars.$medium-gap;
 
   @extend %darkgreen-white;
 
@@ -34,7 +35,82 @@
   }
 
   &__control {
-    text-align: right;
+    @extend %flex-center;
+  }
+
+  &__control.logged-in &__profile {
+    display: block;
+    position: relative;
+    padding-right: $size;
+  }
+
+  &__control.logged-in &__auth {
+    display: none;
+  }
+
+  &__profile {
+    display: none;
+  }
+
+  &__list {
+    $avt-size: 4rem;
+
+    position: absolute;
+    min-width: 280px;
+    top: calc(100% + vars.$small-gap);
+    right: 0;
+    z-index: 1;
+
+    padding: vars.$small-gap;
+    background-color: vars.$inner-text-color;
+
+    border-radius: vars.$small-radius;
+    box-shadow: 0 0 vars.$small-spread vars.$small-spread rgba($color: vars.$boder-color, $alpha: 0.25);
+    opacity: 0;
+    visibility: hidden;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      right: calc($size + ($avt-size - $size) / 2);
+      width: $size;
+      height: $size;
+    }
+
+    &::before {
+      top: calc($size / 2 * -1 + 4px);
+      transform: rotate(45deg);
+
+      background-color: vars.$inner-text-color;
+      border-radius: vars.$small-radius;
+      box-shadow: inherit;
+    }
+
+    &::after {
+      top: 0;
+      width: calc($size + vars.$small-gap);
+      transform: translateX(calc(vars.$small-gap / 2));
+      background-color: vars.$inner-text-color;
+    }
+  }
+
+  &__item {
+    padding: vars.$small-gap;
+    font-size: vars.$regular-font-size;
+  }
+
+  &__link {
+    color: rgba($color: vars.$text-color, $alpha: 0.8);
+
+    &:hover,
+    &:hover > i {
+      color: vars.$primary-color;
+    }
+
+    & > i {
+      margin-right: vars.$small-gap;
+    }
   }
 
   &__nav {

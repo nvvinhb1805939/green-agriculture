@@ -1,6 +1,10 @@
 @use '../abstracts/variables' as vars;
 @use '../abstracts/placeholderSelectors';
 
+.article-list {
+  padding-block: vars.$medium-gap;
+}
+
 .article {
   $regular-gap: calc(vars.$regular-gap / 2);
   $small-gap: 8px;

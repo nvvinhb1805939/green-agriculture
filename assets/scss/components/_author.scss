@@ -7,12 +7,23 @@
   @extend %mb-regular;
   @extend %flex-center;
   justify-content: flex-start;
-  column-gap: vars.$small-gap;
+  gap: vars.$small-gap;
 
   padding: vars.$small-gap;
   width: fit-content;
   border: 1px dashed vars.$primary-color;
   border-radius: vars.$small-radius;
+
+  &--vertical {
+    flex-direction: column;
+    padding: 0;
+    margin-bottom: 0;
+    border: none;
+  }
+
+  &--vertical &__name {
+    font-size: vars.$larger-font-size;
+  }
 
   &__name {
     color: vars.$primary-color;

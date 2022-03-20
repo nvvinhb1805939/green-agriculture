@@ -1,0 +1,6 @@
+@use '../abstracts/variables' as vars;
+.more {
+  margin-bottom: vars.$medium-gap;
+  font-size: vars.$large-font-size;
+  text-align: center;
+}
