@@ -66,6 +66,7 @@
     z-index: 1;
 
     color: vars.$text-color;
+    text-transform: capitalize;
     pointer-events: none;
 
     &.radio {
@@ -81,13 +82,13 @@
     inset: 0;
     padding: $left;
 
-    border-radius: vars.$small-radius;
     font-size: vars.$small-font-size;
     letter-spacing: vars.$large-spacing;
   }
 
   &__input {
     border: $border solid vars.$boder-color;
+    border-radius: vars.$small-radius;
 
     &:disabled {
       color: rgba($color: vars.$text-color, $alpha: 0.6);
@@ -113,10 +114,6 @@
     font-weight: 500;
     background-color: $bg-color;
     color: $border-color;
-  }
-
-  &__submit {
-    text-transform: uppercase;
   }
 
   &__split {

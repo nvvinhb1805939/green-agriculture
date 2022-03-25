@@ -13,8 +13,8 @@
   &__heading {
     padding-bottom: vars.$small-gap;
     font-size: vars.$large-font-size;
-    font-weight: 500;
-    text-transform: unset;
+    font-weight: 400;
+    text-transform: capitalize;
 
     border-bottom: 1px solid vars.$footer-bg-color;
   }
