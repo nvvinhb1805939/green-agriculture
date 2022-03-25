@@ -12,6 +12,7 @@
 @use './components/heading';
 @use './components/cover';
 @use './components/more';
+@use './components/sidebar';
 
 /*==============Core==============*/
 @use './core/reset';
@@ -23,6 +24,7 @@
 @use './layouts/footer';
 
 /*==============Sections==============*/
+@use './sections/info';
 
 /*==============Pages==============*/
 @use './pages/News/index' as news-index;

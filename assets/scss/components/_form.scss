@@ -7,6 +7,7 @@
   $border-color: vars.$primary-color;
   $left: calc((vars.$regular-gap / 2));
   $light-gray: #ccc;
+  $border: 1px;
 
   max-width: 450px;
   margin-inline: auto;
@@ -24,15 +25,37 @@
   }
 
   &__field {
+    $height: 4rem;
+
     position: relative;
     margin-bottom: vars.$small-gap;
-    height: 40px;
+    height: $height;
 
     &--remember {
       margin-bottom: vars.$small-gap;
       @extend %flex-center;
       justify-content: flex-start;
     }
+
+    &--radio {
+      @extend %flex-center;
+      justify-content: flex-start;
+      column-gap: $left;
+      padding-inline: $left;
+
+      & > div {
+        @extend %flex-center;
+        column-gap: calc($left / 2);
+      }
+    }
+  }
+
+  &__field--radio &__label,
+  &__field--radio &__input {
+    position: unset;
+    transform: translateY(0);
+    color: vars.$text-color;
+    pointer-events: initial;
   }
 
   &__label {
@@ -44,6 +67,12 @@
 
     color: vars.$text-color;
     pointer-events: none;
+
+    &.radio {
+      padding: 0 !important;
+      font-weight: normal !important;
+      color: vars.$text-color !important;
+    }
   }
 
   &__input,
@@ -58,15 +87,23 @@
   }
 
   &__input {
-    border: 1px solid vars.$boder-color;
+    border: $border solid vars.$boder-color;
+
+    &:disabled {
+      color: rgba($color: vars.$text-color, $alpha: 0.6);
+      background-color: vars.$inner-text-color;
+      pointer-events: none;
+    }
   }
 
   &__input:focus {
+    padding-left: calc($left + $border - vars.$small-spread);
     border: vars.$small-spread solid vars.$primary-color;
   }
 
   &__input:not(:placeholder-shown) + &__label,
-  &__input:focus + &__label {
+  &__input:focus + &__label,
+  &__input.radio + &__label {
     $inline: 4px;
 
     top: 0;
@@ -94,7 +131,7 @@
       transform: translateY(-50%);
       z-index: 1;
 
-      height: 1px;
+      height: $border;
       background-color: currentColor;
     }
 
@@ -123,7 +160,7 @@
     @extend %flex-center;
     column-gap: 8px;
     padding-inline: vars.$small-gap;
-    border: 1px solid vars.$boder-color;
+    border: $border solid vars.$boder-color;
 
     &:hover {
       border-color: vars.$boder-color;

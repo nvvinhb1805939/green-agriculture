@@ -1,0 +1,57 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/placeholderSelectors';
+
+.info {
+  padding: vars.$medium-gap;
+  border: 1px dashed vars.$primary-color;
+  border-radius: vars.$small-radius;
+
+  &-wrapper {
+    padding-block: vars.$medium-gap;
+  }
+
+  &__heading {
+    padding-bottom: vars.$small-gap;
+    font-size: vars.$large-font-size;
+    font-weight: 500;
+    text-transform: unset;
+
+    border-bottom: 1px solid vars.$footer-bg-color;
+  }
+
+  &__form {
+    margin-top: vars.$medium-gap;
+  }
+
+  &__field {
+    margin-bottom: vars.$regular-gap;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__avt {
+    @extend %flex-center;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  &__label {
+    display: block;
+    width: fit-content;
+    margin-block: vars.$medium-gap;
+
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__btn {
+    padding-inline: vars.$regular-gap;
+    border-radius: vars.$small-radius;
+  }
+}

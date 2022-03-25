@@ -1,0 +1,27 @@
+@use '../abstracts/variables' as vars;
+.sidebar {
+  font-size: vars.$regular-font-size;
+
+  &__list {
+    margin-left: calc(vars.$medium-gap + vars.$small-gap);
+  }
+
+  &__item {
+    padding-block: 4px;
+  }
+
+  &__link {
+    font-size: vars.$regular-font-size;
+    color: rgba($color: vars.$text-color, $alpha: 0.8);
+
+    &.active,
+    &:hover,
+    &:hover > i {
+      color: vars.$primary-color;
+    }
+
+    & > i {
+      margin-right: vars.$small-gap;
+    }
+  }
+}

@@ -69,6 +69,11 @@
     opacity: 0;
     visibility: hidden;
 
+    &.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
     &::before,
     &::after {
       content: '';
@@ -97,10 +102,10 @@
 
   &__item {
     padding: vars.$small-gap;
-    font-size: vars.$regular-font-size;
   }
 
   &__link {
+    font-size: vars.$regular-font-size;
     color: rgba($color: vars.$text-color, $alpha: 0.8);
 
     &:hover,

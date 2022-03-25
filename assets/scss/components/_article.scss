@@ -72,6 +72,27 @@
     flex-basis: 25%;
   }
 
+  &--admin {
+    position: relative;
+  }
+
+  &--admin:hover &__modal {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__modal {
+    @extend %flex-center;
+    column-gap: vars.$small-gap;
+
+    position: absolute;
+    inset: 0 0 vars.$small-gap 0;
+    background-color: vars.$footer-bg-color;
+
+    visibility: hidden;
+    opacity: 0;
+  }
+
   &__link {
     flex-shrink: 0;
   }

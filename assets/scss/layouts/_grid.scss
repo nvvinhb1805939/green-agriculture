@@ -23,6 +23,10 @@
     grid-template-columns: repeat(12, 1fr);
   }
 
+  &--span-1 {
+    grid-column: span 1;
+  }
+
   &--span-2 {
     grid-column: span 2;
   }

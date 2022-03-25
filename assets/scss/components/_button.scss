@@ -29,7 +29,8 @@
   }
 
   &--primary::before,
-  &--cancel::before {
+  &--cancel::before,
+  &--error::before {
     content: '';
 
     position: absolute;
@@ -44,7 +45,8 @@
       @include mixs.set-inset-shadow(vars.$large-spread, vars.$primary-color);
     }
 
-    &:hover {
+    &:hover,
+    &:hover > i {
       color: vars.$primary-color;
     }
 
@@ -58,12 +60,28 @@
       @include mixs.set-inset-shadow(vars.$large-spread, vars.$second-color);
     }
 
-    &:hover {
+    &:hover,
+    &:hover > i {
       color: vars.$second-color;
     }
 
     &:hover::before {
       @include mixs.set-inset-shadow(vars.$small-spread, vars.$second-color);
+    }
+  }
+
+  &--error {
+    &::before {
+      @include mixs.set-inset-shadow(vars.$large-spread, vars.$selection-bg-color);
+    }
+
+    &:hover,
+    &:hover > i {
+      color: vars.$selection-bg-color;
+    }
+
+    &:hover::before {
+      @include mixs.set-inset-shadow(vars.$small-spread, vars.$selection-bg-color);
     }
   }
 
