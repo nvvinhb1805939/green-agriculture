@@ -13,6 +13,8 @@
 @use './components/cover';
 @use './components/more';
 @use './components/sidebar';
+@use './components/modal';
+@use './components/dataList';
 
 /*==============Core==============*/
 @use './core/reset';

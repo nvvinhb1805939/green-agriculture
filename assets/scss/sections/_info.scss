@@ -10,13 +10,18 @@
     padding-block: vars.$medium-gap;
   }
 
-  &__heading {
+  &__header {
+    @extend %flex-center;
+    justify-content: space-between;
+
     padding-bottom: vars.$small-gap;
+    border-bottom: 1px solid vars.$footer-bg-color;
+  }
+
+  &__heading {
     font-size: vars.$large-font-size;
     font-weight: 400;
     text-transform: capitalize;
-
-    border-bottom: 1px solid vars.$footer-bg-color;
   }
 
   &__form {

@@ -1,0 +1,41 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/placeholderSelectors';
+
+.modal {
+  @extend %flex-center;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+
+  background-color: rgba($color: vars.$boder-color, $alpha: 0.25);
+  cursor: pointer;
+
+  opacity: 0;
+  visibility: hidden;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__field {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: vars.$small-gap;
+    margin-bottom: 0;
+
+    &--height {
+      height: 7rem;
+    }
+  }
+
+  &__form {
+    flex: 1;
+    cursor: default;
+  }
+
+  &__btn {
+    position: relative;
+    min-width: 10rem;
+  }
+}

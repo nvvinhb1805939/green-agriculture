@@ -1,0 +1,38 @@
+@use '../abstracts/variables' as vars;
+
+.data-list {
+  position: absolute;
+  top: calc(100% + vars.$small-spread);
+  left: 0;
+  right: 0;
+  z-index: 10;
+
+  display: none;
+
+  &.show {
+    max-height: 20rem;
+    background-color: vars.$inner-text-color;
+    border-radius: vars.$small-radius;
+    border: vars.$small-spread solid vars.$primary-color;
+
+    overflow: auto;
+    display: block;
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &__item {
+    padding: calc(vars.$small-gap / 2) vars.$small-gap;
+    cursor: pointer;
+
+    &:hover {
+      background-color: vars.$footer-bg-color;
+    }
+
+    &.active {
+      color: vars.$primary-color;
+    }
+  }
+}

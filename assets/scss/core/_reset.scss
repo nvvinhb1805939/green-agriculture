@@ -72,3 +72,7 @@ textarea {
 i {
   transition: none;
 }
+
+.blur {
+  filter: blur(vars.$blur);
+}

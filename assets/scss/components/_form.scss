@@ -18,6 +18,10 @@
   border-radius: vars.$small-radius;
   box-shadow: rgba($color: vars.$text-color, $alpha: 0.2) 0px 3px 10px 0px;
 
+  &--large {
+    max-width: 50rem;
+  }
+
   &__heading {
     margin-bottom: vars.$regular-gap;
     font-weight: 400;
@@ -30,6 +34,10 @@
     position: relative;
     margin-bottom: vars.$small-gap;
     height: $height;
+
+    &--regular {
+      margin-bottom: vars.$regular-gap;
+    }
 
     &--remember {
       margin-bottom: vars.$small-gap;
@@ -168,6 +176,16 @@
 
   &__icon {
     font-size: 22px;
+
+    &--end {
+      position: absolute;
+      right: vars.$small-gap;
+      top: 50%;
+      transform: translateY(-50%);
+
+      user-select: none;
+      pointer-events: none;
+    }
 
     &--fb {
       color: #1877f2;

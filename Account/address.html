@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>congdat145 | Nông Nghiệp Xanh</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="shortcut icon" href="../assets/images/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__top">
+          <div class="header__logo logo logo--small">
+            <a href="../News/">
+              <img src="../assets/images/logo.png" alt="logo" class="header__img" />
+              <span>Nông Nghiệp Xanh</span>
+            </a>
+          </div>
+          <div class="header__search">
+            <form class="header__form">
+              <input class="header__input" type="text" />
+              <button class="header__btn btn btn--small btn--primary"><i class="fas fa-search"></i></button>
+            </form>
+          </div>
+          <div class="header__control logged-in">
+            <div class="header__auth">
+              <a href="../Authencation/signup.html" class="link link--regular">Đăng ký</a>
+              <span> | </span>
+              <a href="../Authencation/login.html" class="link link--regular">Đăng nhập</a>
+            </div>
+            <div class="header__profile">
+              <div class="header__avt">
+                <button class="avatar btn">
+                  <img src="../assets/images/img_avatar.png" alt="avt" />
+                </button>
+              </div>
+              <ul class="header__list">
+                <li class="header__item">
+                  <a href="./profile.html" class="header__link"><i class="fas fa-user-circle"></i>Trang cá nhân</a>
+                </li>
+                <li class="header__item">
+                  <a href="./info.html" class="header__link"><i class="fas fa-user"></i>Tài khoản của tôi</a>
+                </li>
+                <li class="header__item">
+                  <a href="#" class="header__link"><i class="fas fa-edit"></i>Viết bài</a>
+                </li>
+                <li class="header__item">
+                  <a href="#" class="header__link"><i class="fas fa-power-off"></i>Đăng xuất</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <nav class="header__nav nav">
+          <a href="#" class="nav__link link link--regular link--bold"><i class="link__icon fas fa-home"></i></a>
+          <a href="../News/category.html" class="nav__link link link--regular link--bold">Nông nghiệp 4.0</a>
+          <a href="#" class="nav__link link link--regular link--bold">Sản vật địa phương</a>
+          <a href="#" class="nav__link link link--regular link--bold">Organic</a>
+          <a href="#" class="nav__link link link--regular link--bold">Tài chính</a>
+          <a href="#" class="nav__link link link--regular link--bold">Thị trường</a>
+          <a href="#" class="nav__link link link--regular link--bold">Doanh nghiệp</a>
+          <a href="#" class="nav__link link link--regular link--bold">Ẩm thực</a>
+          <a href="../Forums/" class="nav__link link link--regular link--bold">Diễn đàn</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container grid info-wrapper">
+      <section class="sidebar grid--span-1">
+        <aside class="sidebar__dropdown">
+          <a href="./info.html" class="sidebar__link"><i class="fas fa-user"></i>Tài khoản của tôi</a>
+          <ul class="sidebar__list">
+            <li class="sidebar__item">
+              <a href="./info.html" class="sidebar__link">Hồ sơ</a>
+            </li>
+            <li class="sidebar__item">
+              <a href="./address.html" class="sidebar__link active">Địa chỉ</a>
+            </li>
+            <li class="sidebar__item">
+              <a href="./passworrd.html" class="sidebar__link">Mật khẩu</a>
+            </li>
+          </ul>
+        </aside>
+      </section>
+      <section class="info grid--span-3">
+        <div class="info__header">
+          <h4 class="info__heading">Địa chỉ của tôi</h4>
+          <button id="add" class="btn btn--medium btn--primary info__btn">
+            <i class="fas fa-plus"></i>
+            Thêm địa chỉ mới
+          </button>
+        </div>
+        <div class="modal">
+          <form class="form form--large modal__form">
+            <h4 class="form__heading">Địa chỉ mới</h4>
+            <div class="form__field form__field--regular">
+              <input id="province" class="form__input modal__input" type="text" name="province" placeholder=" " />
+              <label class="form__label" for="province">Tỉnh/Thành phố</label>
+              <i class="fas fa-caret-down form__ico form__icon--end"></i>
+              <ul class="data-list modal__list"></ul>
+            </div>
+            <div class="form__field form__field--regular">
+              <input id="district" class="form__input modal__input" type="text" name="district" placeholder=" " />
+              <label class="form__label" for="district">Quận/Huyện</label>
+              <i class="fas fa-caret-down form__ico form__icon--end"></i>
+              <ul class="data-list modal__list"></ul>
+            </div>
+            <div class="form__field form__field--regular">
+              <input id="ward" class="form__input modal__input" type="text" name="ward" placeholder=" " />
+              <label class="form__label" for="ward">Phường/Xã</label>
+              <i class="fas fa-caret-down form__ico form__icon--end"></i>
+              <ul class="data-list modal__list"></ul>
+            </div>
+            <div class="form__field form__field--regular modal__field--height">
+              <textarea id="detail" class="form__input" type="text" name="detail" placeholder=" "></textarea>
+              <label class="form__label" for="detail">Địa chỉ cụ thể</label>
+            </div>
+            <div class="form__field form__field--regular modal__field">
+              <button class="form__submit btn btn--error modal__btn" type="button">Huỷ</button>
+              <button class="form__submit btn btn--primary modal__btn" type="submit">Lưu</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__logo logo logo--second logo--regular">
+          <a href="../News/">
+            <img src="../assets/images/logo.png" alt="logo" class="header__img" />
+            <span>Nông Nghiệp Xanh</span>
+          </a>
+        </div>
+        <div class="footer__contact">
+          <ul class="footer__list">
+            <li class="footer__item">Địa chỉ: Đại học Cần Thơ Khu II, 3/2, Xuân Khánh, Ninh Kiều, Cần Thơ</li>
+            <li class="footer__item">
+              Email: <a href="mailto:nongnghiepxanh@gmail.com" class="link">nongnghiepxanh@gmail.com</a>
+            </li>
+            <li class="footer__item">Hotline: <a href="tel:0123456789" class="link">0123456789</a></li>
+          </ul>
+        </div>
+        <div class="footer__copyright">
+          <p>© Nông Nghiệp Xanh - Nền tảng thương mại điện tử dành cho thị trường nông nghiệp Việt Nam</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../assets/js/toggleList.js"></script>
+    <script src="../assets/js/fetchDataProvinces.js"></script>
+  </body>
+</html>
