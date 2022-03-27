@@ -27,6 +27,7 @@
 
 /*==============Sections==============*/
 @use './sections/info';
+@use './sections/editor';
 
 /*==============Pages==============*/
 @use './pages/News/index' as news-index;

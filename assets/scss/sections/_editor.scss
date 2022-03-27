@@ -1,0 +1,13 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/placeholderSelectors';
+
+.editor {
+  &__wrapper {
+    @extend %mb-regular;
+  }
+
+  &__btn {
+    @extend %mb-regular;
+    min-width: 10rem;
+  }
+}
