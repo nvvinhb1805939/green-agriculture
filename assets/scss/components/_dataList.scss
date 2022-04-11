@@ -10,7 +10,7 @@
   display: none;
 
   &.show {
-    max-height: 20rem;
+    height: 20rem;
     background-color: vars.$inner-text-color;
     border-radius: vars.$small-radius;
     border: vars.$small-spread solid vars.$primary-color;

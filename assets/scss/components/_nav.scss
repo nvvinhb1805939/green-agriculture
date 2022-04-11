@@ -1,11 +1,68 @@
 @use '../abstracts/variables' as vars;
 
 .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   text-align: center;
+
+  &__dropdown {
+    position: relative;
+    width: fit-content;
+  }
+
+  &__link--dropdown::before {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -100%;
+    // z-index: -1;
+
+    height: 100%;
+    background-color: transparent;
+    // opacity: 0;
+    // visibility: hidden;
+  }
+
+  &__dropdown:hover &__list,
+  &__link:hover ~ &__list {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__list {
+    position: absolute;
+    left: 0;
+    top: calc(100% + vars.$small-gap);
+    z-index: 1;
+
+    min-width: 250px;
+    padding: vars.$small-gap vars.$regular-gap;
+    text-align: left;
+
+    color: vars.$inner-text-color;
+    background-color: vars.$primary-color;
+    border-radius: vars.$small-radius;
+    box-shadow: 0 0 5px vars.$boder-color;
+
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__item {
+    margin-top: vars.$small-gap;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
 
   &__link {
     text-transform: uppercase;
     letter-spacing: vars.$large-spacing;
+    white-space: nowrap;
 
     & ~ & {
       margin-left: vars.$small-gap;

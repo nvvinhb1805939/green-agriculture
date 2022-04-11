@@ -33,7 +33,18 @@
         </div>
         <nav class="header__nav nav">
           <a href="#" class="nav__link link link--regular link--bold active"><i class="link__icon fas fa-home"></i></a>
-          <a href="./category.html" class="nav__link link link--regular link--bold">Nông nghiệp 4.0</a>
+          <div class="nav__dropdown">
+            <a href="./category.html" class="nav__link nav__link--dropdown link link--regular link--bold"
+              >Nông nghiệp 4.0</a
+            >
+            <ul class="nav__list">
+              <li class="nav__item"><a href="" class="nav__link link link--regular link--bold">item 1</a></li>
+              <li class="nav__item"><a href="" class="nav__link link link--regular link--bold">item 2</a></li>
+              <li class="nav__item"><a href="" class="nav__link link link--regular link--bold">item 3</a></li>
+              <li class="nav__item"><a href="" class="nav__link link link--regular link--bold">item 4</a></li>
+              <li class="nav__item"><a href="" class="nav__link link link--regular link--bold">item 5</a></li>
+            </ul>
+          </div>
           <a href="#" class="nav__link link link--regular link--bold">Sản vật địa phương</a>
           <a href="#" class="nav__link link link--regular link--bold">Organic</a>
           <a href="#" class="nav__link link link--regular link--bold">Tài chính</a>
@@ -730,5 +741,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="../assets/js/showActiveLink.js"></script>
   </body>
 </html>

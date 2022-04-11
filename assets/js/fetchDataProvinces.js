@@ -19,7 +19,7 @@ const fetchDataProvince = async url => {
   const response = await fetch(url);
   const provinceList = await response.json();
 
-  console.log(provinceList);
+  provinceListElms[0].innerHTML = '';
 
   provinceList.forEach(provinceItem => {
     const name = provinceItem.name.replace('Tỉnh', '').replace('Thành phố', '').trim();
@@ -32,10 +32,11 @@ const fetchDataProvince = async url => {
   });
 };
 
-const filterProvince = () => {};
-
 inputElms.forEach((inputElm, index) => {
   inputElm.addEventListener('focus', () => {
+    document.querySelectorAll('.data-list.modal__list.show').forEach(item => {
+      item?.classList.remove('show');
+    });
     provinceListElms[index].classList.add('show');
   });
 
@@ -45,8 +46,10 @@ inputElms.forEach((inputElm, index) => {
 });
 
 inputElms[0].addEventListener('input', e => {
-  console.log(`${API_URL}/p/search/?q=${e.target.value}`);
-  fetchDataProvince(`${API_URL}/p/search/?q=${e.target.value}`);
+  const value = e.target.value.trim();
+
+  if (value == '') fetchDataProvince(`${API_URL}/p/`);
+  else fetchDataProvince(`${API_URL}/p/search/?q=${value}`);
 });
 
 const handleAddClick = () => {
@@ -56,14 +59,18 @@ const handleAddClick = () => {
 
 const handleModalFormClick = e => {
   e.stopPropagation();
-  document.querySelector('.data-list.modal__list.show')?.classList.remove('show');
+  document.querySelectorAll('.data-list.modal__list.show').forEach(item => {
+    item?.classList.remove('show');
+  });
 };
 
 const handleCloseModal = () => {
   modalElm.classList.remove('show');
   modalFormElm.reset();
   document.querySelector('.data-list__item.active')?.classList.remove('active');
-  document.querySelector('.data-list.modal__list.show')?.classList.remove('show');
+  document.querySelectorAll('.data-list.modal__list.show').forEach(item => {
+    item?.classList.remove('show');
+  });
 };
 
 addBtnElm.addEventListener('click', handleAddClick);
